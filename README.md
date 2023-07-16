@@ -42,7 +42,7 @@ git clone https://github.com/shreya5340/attendance-system
 
 2. Download the pre-trained facial emotion detection model:
 
-https://github.com/shreya5340/attendance-system/blob/main/model.h5
+https://github.com/shreya5340/Face-Recognition-Mood-Attendance-System-with-Bitmoji-Conversion/blob/main/model.h5
 ## Usage
 
 1. Run the main script:
