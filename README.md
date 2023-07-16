@@ -37,7 +37,7 @@ The Face Recognition Mood Attendance System with Bitmoji Conversion uses the fol
 1. Clone the repository:
 
 
-git clone https://github.com/shreya5340/attendance-system
+git clone https://github.com/shreya5340/Face-Recognition-Mood-Attendance-System-with-Bitmoji-Conversion
 
 
 2. Download the pre-trained facial emotion detection model:
