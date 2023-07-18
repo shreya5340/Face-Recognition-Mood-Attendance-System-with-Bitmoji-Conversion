@@ -16,33 +16,47 @@ The Face Recognition Mood Attendance System with Bitmoji Conversion uses the fol
 
 - *Python*: The application is developed in Python, taking advantage of its versatility and extensive libraries for computer vision and machine learning.
 
-- *OpenCV*: OpenCV is a powerful computer vision library that provides tools for image and video processing, facial recognition, and emotion detection.
+- *openCV*: OpenCV is a powerful computer vision library that provides tools for image and video processing, facial recognition, and emotion detection.
 
 - *face_recognition*: The face_recognition module is utilized for face detection and recognition. It accurately recognizes registered individuals based on facial encodings.
 
-- *Convolutional Neural Network (CNN)*: The CNN model is used for real-time emotion detection. The model is trained on a large dataset of facial emotion images, allowing it to predict emotions accurately.
+- *Convolutional Neural Network (CNN)*: The CNN models are used for real-time emotion and gender detection. The models are trained on a large dataset of facial emotion and gender images, allowing it to predict emotions and gender accurately.
 
-- *Bitmoji API*: The Bitmoji API is integrated into the system to convert detected faces into personalized bitmoji avatars. The API uses facial features and detected emotions as input to create expressive and unique bitmoji images.
+- *matplotlib*: This library is used to analyse the models that were trained.
+
+- *scikit-learn*: A Python library for machine learning that provides a comprehensive set of tools for data preprocessing, modeling, and evaluation.
+
 
 ## How It Works
 
 1. *Face Recognition Attendance*: The system captures video feed from the web camera using OpenCV. It then uses the face_recognition module to detect and recognize faces in real-time. By comparing the facial encodings of detected faces with registered individuals, the system logs their attendance.
 
-2. *Facial Emotion Detection*: After recognizing a face, the Haarcascade frontal face classifier is used to detect facial regions of interest. The detected regions are passed through the pre-trained CNN model, which predicts the individual's emotion. The predicted emotion is displayed alongside the detected face.
+2. *Facial Emotion Detection*: After recognizing a face, the Haarcascade frontal face classifier is used to detect facial regions of interest. The detected regions are passed through the trained CNN models, which predict the individual's emotion and gender. The predicted emotion is displayed alongside the detected face.
 
-3. *Bitmoji Conversion*: Once the face and emotion are detected, the system sends this information to the Bitmoji API. The API processes the input data to create a personalized bitmoji avatar reflecting the individual's facial features and mood. The bitmoji avatar is displayed alongside the individual's face.
+3. *Bitmoji Conversion*: Once the face and emotion are detected, the system overlays the bitmoji corresponding to their gender and emotion on their faces.
 
 ## Installation
 
 1. Clone the repository:
 
-
 git clone https://github.com/shreya5340/Face-Recognition-Mood-Attendance-System-with-Bitmoji-Conversion
 
-
-2. Download the pre-trained facial emotion detection model:
+2. Download the facial emotion detection model:
 
 https://github.com/shreya5340/Face-Recognition-Mood-Attendance-System-with-Bitmoji-Conversion/blob/main/model.h5
+
+3. Download the gender detection model:
+
+https://drive.google.com/file/d/1yn0Oe9X9k4HqLMgDvr5QslcWyc_FyVTb/view?usp=drive_link
+
+4. Download the emotions dataset (Optional):
+
+https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset
+
+5. Download the gebder dataset (Optional):
+
+https://www.kaggle.com/datasets/maciejgronczynski/biggest-genderface-recognition-dataset
+
 ## Usage
 
 1. Run the main script:
@@ -56,6 +70,11 @@ ATTENDANCE.ipynb
 3. The system will automatically log attendance for recognized faces in a designated CSV file.
 
 4. To exit the application, press q.
+
+## Note
+
+- The attendance register will be updated only after the ATTENDANCE.ipynb file is terminated completely.
+- Name of the attendance register will be saved by the date on which it will be run with CSV file extension.
 
 ## Limitations
 
@@ -78,5 +97,8 @@ ATTENDANCE.ipynb
 - keras
 - time
 - tensorflow
+- scikit-learn
+- matplotlib
+- os
 
 ---
